@@ -1,0 +1,120 @@
+// settings.kdl - everything except keybinds
+// Loaded via `include "settings.kdl"` from config.kdl
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 32
+    hide-when-typing
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "fr"
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        accel-profile "flat"
+    }
+
+    trackpoint {
+    }
+
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+}
+
+// Run `niri msg outputs` to list outputs and their modes/names.
+output "DP-2" {
+    mode "1920x1080@164.917"
+    scale 1
+    transform "normal"
+    position x=1280 y=0
+}
+
+debug {
+    wait-for-frame-completion-before-queueing
+}
+
+layout {
+    gaps 10
+    center-focused-column "never"
+    background-color "transparent"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 3
+        active-color "#bd93f9"
+        inactive-color "#505050"
+    }
+
+    border {
+        width 4
+        active-gradient from="#9141ac" to="#bd93f9" angle=45 relative-to="workspace-view"
+        urgent-color "#9b0000"
+    }
+
+    shadow {
+        on
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    tab-indicator {
+        active-color   "#d0bcff"
+        inactive-color "#948f99"
+        urgent-color   "#f2b8b5"
+    }
+
+    insert-hint {
+        color "#d0bcff80"
+    }
+
+    struts {
+    }
+}
+
+recent-windows {
+    highlight {
+        corner-radius 12
+        active-color   "#4f378b"
+        urgent-color   "#f2b8b5"
+    }
+}
+
+// Startup
+spawn-at-startup "gnome-keyring-daemon --start --components=secrets"
+spawn-at-startup "vicinae" "server"
+spawn-at-startup "swaybg" "-i" "/home/mimil/Pictures/Wallpapers/ekn51fwc5me71.png"
+spawn-at-startup "noctalia"
+spawn-at-startup "waybar"
+spawn-at-startup "dunst"
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+}
+

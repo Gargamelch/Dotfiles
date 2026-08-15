@@ -1,0 +1,224 @@
+// This configuration is merged with the default vicinae configuration file, which you can obtain by running the `vicinae config default` command.
+// Every item defined in this file takes precedence over the values defined in the default config or any other imported file.
+//
+// You can make manual edits to this file, however you should keep in mind that this file may be written to by vicinae when a configuration change is made through the GUI.
+// When that happens, any custom comments or formatting will be lost.
+//
+// If you want to maintain a configuration file with your own comments and formatting, you should create a separate file and add it to the 'imports' array.
+//
+// Learn more about configuration at https://docs.vicinae.com/config
+
+{
+   "$schema": "https://vicinae.com/schemas/config.json",
+   "close_on_focus_loss": true,
+   "activate_on_single_click": true,
+   "escape_key_behavior": "close_window",
+   "theme": {
+      "light": {
+         "name": "vicinae-dark"
+      },
+      "dark": {
+         "name": "vicinae-dark",
+         "icon_theme": "MoreWaita"
+      }
+   },
+   "telemetry": {
+      "system_info": false
+   },
+   "launcher_window": {
+      "opacity": 0.7
+   },
+   "keybinds": {
+      "toggle-action-panel": "alt+Q"
+   },
+   "providers": {
+      "applications": {
+         "entrypoints": {
+            "jupyter-notebook": {
+               "enabled": false
+            },
+            "jupyterlab": {
+               "enabled": false
+            },
+            "lpf": {
+               "enabled": false
+            },
+            "lpf-gui": {
+               "enabled": false
+            },
+            "lpf-notify": {
+               "enabled": false
+            },
+            "lpf-xone-firmware": {
+               "enabled": false
+            },
+            "org.gnome.Lollypop": {
+               "enabled": false
+            },
+            "org.gnome.Tour": {
+               "enabled": false
+            },
+            "vicinae": {
+               "enabled": false
+            }
+         }
+      },
+      "browser-extension": {
+         "enabled": false,
+         "entrypoints": {
+            "browse-tabs": {
+               "enabled": false
+            },
+            "shortcut-active-tab": {
+               "enabled": false
+            }
+         }
+      },
+      "clipboard": {
+         "enabled": false,
+         "preferences": {
+            "encryption": false,
+            "eraseOnStartup": true,
+            "ignorePasswords": false,
+            "monitoring": false
+         },
+         "entrypoints": {
+            "history": {
+               "enabled": false
+            }
+         }
+      },
+      "core": {
+         "entrypoints": {
+            "about": {
+               "enabled": false
+            },
+            "documentation": {
+               "enabled": false
+            },
+            "keybind-settings": {
+               "enabled": false
+            },
+            "list-extensions": {
+               "enabled": false
+            },
+            "manage-fallback": {
+               "enabled": false
+            },
+            "oauth-token-store": {
+               "enabled": false
+            },
+            "open-config-file": {
+               "enabled": false
+            },
+            "open-default-config": {
+               "enabled": false
+            },
+            "prune-memory": {
+               "enabled": false
+            },
+            "refresh-apps": {
+               "enabled": true
+            },
+            "reload-scripts": {
+               "enabled": false
+            },
+            "report-bug": {
+               "enabled": false
+            },
+            "search-builtin-icons": {
+               "enabled": false
+            },
+            "search-emojis": {
+               "enabled": false
+            },
+            "settings": {
+               "enabled": false
+            },
+            "sponsor": {
+               "enabled": false
+            },
+            "store": {
+               "enabled": false
+            }
+         }
+      },
+      "developer": {
+         "enabled": false
+      },
+      "manage-shortcuts": {
+         "enabled": false,
+         "entrypoints": {
+            "create": {
+               "alias": "d",
+               "enabled": false
+            },
+            "manage": {
+               "enabled": false
+            }
+         }
+      },
+      "power": {
+         "enabled": true,
+         "entrypoints": {
+            "hibernate": {
+               "enabled": false
+            },
+            "lock": {
+               "enabled": true,
+               "preferences": {
+                  "confirm": true
+               }
+            },
+            "logout": {
+               "enabled": true
+            },
+            "power-off": {
+               "enabled": true
+            },
+            "reboot": {
+               "enabled": true
+            },
+            "sleep": {
+               "enabled": false
+            },
+            "soft-reboot": {
+               "enabled": false
+            },
+            "suspend": {
+               "enabled": false
+            }
+         }
+      },
+      "raycast-compat": {
+         "enabled": false,
+         "entrypoints": {
+            "store": {
+               "enabled": false,
+               "preferences": {
+                  "alwaysShowIntro": false
+               }
+            }
+         }
+      },
+      "shortcuts": {
+         "enabled": true,
+         "entrypoints": {
+            "3422ea18-7b39-4c39-8cf9-1ac3733beb35": {
+               "alias": "d",
+               "enabled": true
+            }
+         }
+      },
+      "system": {
+         "entrypoints": {
+            "run": {
+               "enabled": false
+            }
+         }
+      },
+      "theme": {
+         "enabled": false
+      }
+   }
+}

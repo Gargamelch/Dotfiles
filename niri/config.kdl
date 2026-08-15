@@ -1,0 +1,16 @@
+// niri config - https://kdl.dev
+// Full reference: https://yalter.github.io/niri/Configuration:-Introduction
+//
+// This is a thin loader. Actual settings live in:
+//   settings.kdl      - input, output, layout, theming, startup, debug
+//   window-rules.kdl  - all window-rule {} blocks and blur tuning
+//   keybinds.kdl      - all binds {}
+//
+// All files must sit next to this one (same directory, e.g. ~/.config/niri/).
+// niri watches included files too, so editing any of them still live-reloads.
+
+prefer-no-csd
+
+include "settings.kdl"
+include "window-rules.kdl"
+include "keybinds.kdl"

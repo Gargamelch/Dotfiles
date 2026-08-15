@@ -1,0 +1,108 @@
+// window-rules.kdl - all window-rule {} blocks and blur tuning
+// Loaded via `include "window-rules.kdl"` from config.kdl
+
+// WezTerm initial-configure workaround
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Blur most windows by default
+window-rule {
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+blur {
+    passes 7
+    offset 5.0
+    noise 0.03
+    saturation 5
+}
+
+// Firefox picture-in-picture -> floating
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="org.gnome.Calculator"
+    open-floating true
+}
+
+window-rule {
+    match app-id="pavucontrol"
+    open-floating true
+}
+
+window-rule {
+    match app-id="discord"
+    match app-id="io.missioncenter.MissionCenter"
+    match app-id="org.signal.Signal"
+    open-maximized false
+    default-column-width { proportion 0.66667; }
+}
+
+window-rule {
+    match app-id="kitty"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="vicinae"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+// Full-width apps
+window-rule {
+    match app-id="app.zen_browser.zen"
+    match app-id="com.stremio.Stremio"
+    match app-id="dev.zed.Zed"
+    match app-id="org.inkscape.Inkscape"
+    match app-id="org.libreoffice.LibreOffice"
+    match app-id="org.onlyoffice.desktopeditors"
+    match app-id="tv.kodi.Kodi"
+    match app-id="firefox"
+    match app-id="org.gimp.GIMP"
+    match app-id="com.google.Chrome"
+    match app-id="org.pgadmin.pgadmin4"
+    match app-id="org.chromium.Chromium"
+    match app-id="steam"
+    match app-id="code"
+    default-column-width { proportion 1.0; }
+}
+
+// Rounded corners everywhere
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+    tiled-state true
+    draw-border-with-background false
+}
+
+// ---- Layer rules (for layer-shell surfaces like bars, launchers, notifications) ----
+// window-rule does NOT apply to these - they need their own layer-rule.
+
+// Blur behind Waybar itself
+layer-rule {
+    match namespace="^waybar$"
+    background-effect {
+        blur true
+    }
+
+    // Also blur behind Waybar's tooltips (GTK popups)
+    popups {
+        background-effect {
+            blur true
+        }
+    }
+}
