@@ -16,7 +16,7 @@ window-rule {
 }
 
 blur {
-    passes 7
+    passes 3
     offset 5.0
     noise 0.03
     saturation 5
@@ -54,13 +54,6 @@ window-rule {
     }
 }
 
-window-rule {
-    match app-id="vicinae"
-    background-effect {
-        blur true
-        xray false
-    }
-}
 
 // Full-width apps
 window-rule {
@@ -105,4 +98,14 @@ layer-rule {
             blur true
         }
     }
+}
+
+// Blur behind Vicinae
+layer-rule {
+    match namespace="^vicinae$"
+    background-effect {
+        blur true
+        xray false
+    }
+    geometry-corner-radius 10
 }
