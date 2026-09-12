@@ -39,6 +39,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id="com.github.huluti.Coulr"
+    open-floating true
+}
+
+
+window-rule {
     match app-id="discord"
     match app-id="io.missioncenter.MissionCenter"
     match app-id="org.signal.Signal"

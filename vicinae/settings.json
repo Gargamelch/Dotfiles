@@ -12,7 +12,11 @@
    "$schema": "https://vicinae.com/schemas/config.json",
    "close_on_focus_loss": true,
    "activate_on_single_click": true,
+   "wrap_navigation": true,
    "escape_key_behavior": "close_window",
+   "tray": {
+      "enabled": false
+   },
    "theme": {
       "light": {
          "name": "vicinae-dark"
@@ -39,6 +43,7 @@
    "keybinds": {
       "toggle-action-panel": "alt+Q"
    },
+   "favorites": [],
    "providers": {
       "applications": {
          "entrypoints": {
@@ -88,7 +93,9 @@
             "encryption": false,
             "eraseOnStartup": true,
             "ignorePasswords": false,
-            "monitoring": false
+            "monitoring": false,
+            "evictionThreshold": "never",
+            "preserveTagged": false
          },
          "entrypoints": {
             "history": {
@@ -138,6 +145,9 @@
                "enabled": false
             },
             "search-emojis": {
+               "enabled": false
+            },
+            "search-tray": {
                "enabled": false
             },
             "settings": {
@@ -219,13 +229,41 @@
          }
       },
       "system": {
+         "enabled": false,
          "entrypoints": {
             "run": {
+               "enabled": false
+            },
+            "toggle-mute": {
+               "enabled": false
+            },
+            "volume-0": {
+               "enabled": false
+            },
+            "volume-100": {
+               "enabled": false
+            },
+            "volume-25": {
+               "enabled": false
+            },
+            "volume-50": {
+               "enabled": false
+            },
+            "volume-75": {
+               "enabled": false
+            },
+            "volume-down": {
+               "enabled": false
+            },
+            "volume-up": {
                "enabled": false
             }
          }
       },
       "theme": {
+         "enabled": false
+      },
+      "wm": {
          "enabled": false
       }
    }
