@@ -104,8 +104,7 @@ recent-windows {
 // Startup
 spawn-at-startup "gnome-keyring-daemon --start --components=secrets"
 spawn-at-startup "vicinae" "server"
-spawn-at-startup "swaybg" "-i" "/home/mimil/Pictures/Wallpapers/nh869lx9by6h1.png"
-spawn-at-startup "noctalia"
+spawn-at-startup "swaybg" "-i" "/home/mimil/Pictures/Wallpapers/adwaita-d.png" "-m" "fill"
 spawn-at-startup "waybar"
 spawn-at-startup "dunst"
 
@@ -116,4 +115,8 @@ hotkey-overlay {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
+}
+
+overview {
+    backdrop-color "#1e1e2e"
 }
