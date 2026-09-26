@@ -22,7 +22,7 @@
          "name": "vicinae-dark"
       },
       "dark": {
-         "name": "vicinae-dark",
+         "name": "libadwaita-dark",
          "icon_theme": "MoreWaita"
       }
    },
@@ -176,6 +176,9 @@
             }
          }
       },
+      "media": {
+         "enabled": false
+      },
       "power": {
          "enabled": false,
          "entrypoints": {
@@ -226,6 +229,15 @@
                "alias": "d",
                "enabled": true
             }
+         }
+      },
+      "snippets": {
+         "preferences": {
+            "enabled": true,
+            "keyDelay": "2",
+            "layout": "",
+            "prePasteDelay": "0",
+            "undo": true
          }
       },
       "system": {
