@@ -142,5 +142,6 @@ binds {
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
+    Mod+Shift+End { spawn "wlogout" "-p" "layer-shell"; }
     Ctrl+Alt+Delete { quit; }
 }

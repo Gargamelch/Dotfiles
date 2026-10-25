@@ -104,8 +104,8 @@ recent-windows {
 // Startup
 spawn-at-startup "gnome-keyring-daemon --start --components=secrets"
 spawn-at-startup "vicinae" "server"
-spawn-at-startup "swaybg" "-i" "/home/mimil/Pictures/Wallpapers/adwaita-d.png" "-m" "fill"
-spawn-at-startup "waybar"
+spawn-at-startup "swaybg" "-i" "/home/mimil/Pictures/Wallpapers/61py3h4ocksh1.jpeg" "-m" "fill"
+// spawn-at-startup "waybar"
 spawn-at-startup "dunst"
 
 hotkey-overlay {

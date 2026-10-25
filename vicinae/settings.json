@@ -22,7 +22,7 @@
          "name": "vicinae-dark"
       },
       "dark": {
-         "name": "libadwaita-dark",
+         "name": "dracula",
          "icon_theme": "MoreWaita"
       }
    },
